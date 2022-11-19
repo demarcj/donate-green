@@ -2,6 +2,7 @@ import React from "react";
 import styles from './start.module.css';
 
 export const Start: React.FC = () => {
+  console.log(`test`)
   return (
     <div className={styles.start_container}>
       <div className={styles.img}></div>
