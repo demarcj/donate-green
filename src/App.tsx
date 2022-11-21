@@ -1,10 +1,11 @@
+import React from 'react';
 import { Portal } from './components/layout/portal/portal';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
     <Portal />
   );
 }
 
-export default App;
+export default App

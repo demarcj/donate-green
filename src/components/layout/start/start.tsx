@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { IconTitle } from "../../ui/icon-title/icon-title";
+import { StartModel } from "../../../interface"
 import styles from './start.module.css';
 
-export const Start: React.FC = () => {
+export const Start: React.FC<StartModel> = ({route_signup, signin}) => {
+  const [ email, set_email ] = useState(``);
+  const [ password, set_password ] = useState(``);
+
   return (
-    <div className={styles.start_container}>
-      <div className={styles.img}></div>
-      <h1 className={styles.title}>Donate Green</h1>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" name="password" id="password" />
-      <button>Sign in</button>
+    <div>
+      <IconTitle />
+      <input 
+        type="email" 
+        placeholder="Email" 
+        value={email}
+        onChange={e => set_email(e.target.value)}
+      />
+      <input 
+        type="password" 
+        placeholder="Password" 
+        value={password}
+        onChange={e => set_password(e.target.value)}
+      />
+      <button 
+        onClick={signin}
+      >Sign in</button>
       <div className={styles.divider_container}>
         <div className={styles.divider}></div>
         <div className={styles.text}>Or</div>
         <div className={styles.divider}></div>
       </div>
-      <button>Sign up</button>
+      <button
+        onClick={() => route_signup(`signup_page`)}
+      >Sign up</button>
     </div>
   )
 }
