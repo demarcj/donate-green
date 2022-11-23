@@ -1,5 +1,10 @@
 :root{
-  --font-size: 20px
+  --font-size: 20px;
+  --green: #50AE86;
+  --pale-green: #B7D694;
+  --dark-green: #183636;
+  --orange: #FF8540;
+  --gray: #707070
 }
 
 *{

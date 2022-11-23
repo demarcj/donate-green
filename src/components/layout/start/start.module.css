@@ -13,3 +13,17 @@
   height: 1px;
   background-color: black;
 }
+
+.signin_btn{
+  border-radius: 10px;
+  background-color: var(--green);
+  color: white;
+  border: none;
+}
+
+.signup_btn{
+  background-color: white;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+}

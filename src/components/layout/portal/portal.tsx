@@ -24,20 +24,30 @@ export const Portal: React.FC = () => {
   }
 
   return (
-    <div className={styles.start_container}>
-      {is_signin.includes('signup_page') ? (
-          <Signup 
-            signup={signup}
-            route_signup={route_signup}
-          />
-        ) : is_signin.includes('start_page') ? (
-          <Start 
-            route_signup={route_signup}
-            signin={signin}
-          />
-      ) : (
-        <Main />
-      )}
-    </div>
+    <main className={styles.main}>
+      <div 
+        className={
+          is_signin.includes('signup_page') || is_signin.includes('start_page') ? styles.start_container : styles.no_show
+        }
+      >
+        {
+          is_signin.includes('signup_page') ? (
+            <Signup 
+              signup={signup}
+              route_signup={route_signup}
+            />
+          ) : ``
+        }
+        {
+          is_signin.includes('start_page') ? (
+            <Start 
+              route_signup={route_signup}
+              signin={signin}
+            />
+          ) : ``
+        }
+      </div>
+      { is_signin.includes('main_page') ? <Main /> : `` }
+    </main>
   )
 }
