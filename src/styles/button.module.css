@@ -1,0 +1,13 @@
+.default{
+  border-radius: 10px;
+  background-color: var(--green);
+  color: white;
+  border: none;
+}
+
+.outline{
+  background-color: white;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+}

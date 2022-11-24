@@ -1,5 +1,5 @@
 import React from "react";
-import { NavBar } from "../../ui/nav-bar/nav-bar";
+import { NavBar } from "components/ui";
 
 export const Main: React.FC = () => {
   return (

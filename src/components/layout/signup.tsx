@@ -1,6 +1,7 @@
 import React, { FormEvent, useState } from "react";
-import { IconTitle } from "../../ui/icon-title/icon-title";
-import { SignupModel } from "../../../interface"
+import { IconTitle } from "components/ui";
+import { SignupModel } from "interface";
+import button from "styles/button.module.css"
 
 export const Signup: React.FC<SignupModel> = ({signup, route_signup}) => {
   const [ name, set_name ] = useState(``);
@@ -41,7 +42,10 @@ export const Signup: React.FC<SignupModel> = ({signup, route_signup}) => {
         value={country}
         onChange={e => set_country(e.target.value)}
       />
-      <button type="submit">Sign up</button>
+      <button 
+        className={button.outline}
+        type="submit"
+      >Sign up</button>
     </form>
   )
 }

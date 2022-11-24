@@ -1,8 +1,7 @@
 import React from "react";
-import styles from './icon-title.module.css';
+import styles from 'styles/icon-title.module.css';
 
 export const IconTitle: React.FC = () => {
-
   return (
     <div>
       <div className={styles.img}></div>
