@@ -1,7 +1,8 @@
 import React, { FormEvent, useState } from "react";
 import { IconTitle } from "components/ui";
 import { SignupModel } from "interface";
-import button from "styles/button.module.css"
+import button from "styles/button.module.css";
+import icon from "styles/material-icon.module.css";
 
 export const Signup: React.FC<SignupModel> = ({signup, route_signup}) => {
   const [ name, set_name ] = useState(``);
@@ -16,36 +17,42 @@ export const Signup: React.FC<SignupModel> = ({signup, route_signup}) => {
   }
 
   return (
-    <form onSubmit={handle_submit}>
-      <IconTitle />
-      <input 
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={e => set_name(e.target.value)}
-      />
-      <input 
-        type="email" 
-        placeholder="Email" 
-        value={email}
-        onChange={e => set_email(e.target.value)}
-      />
-      <input 
-        type="password" 
-        placeholder="Password" 
-        value={password}
-        onChange={e => set_password(e.target.value)}
-      />
-      <input 
-        type="text" 
-        placeholder="Country"
-        value={country}
-        onChange={e => set_country(e.target.value)}
-      />
-      <button 
-        className={button.outline}
-        type="submit"
-      >Sign up</button>
-    </form>
+    <>
+      <span 
+        className={[`material-icons`, icon.back].join(` `)}
+        onClick={() => route_signup(`start_page`)}
+      >navigate_before</span>
+      <form onSubmit={handle_submit}>
+        <IconTitle />
+        <input 
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={e => set_name(e.target.value)}
+        />
+        <input 
+          type="email" 
+          placeholder="Email" 
+          value={email}
+          onChange={e => set_email(e.target.value)}
+        />
+        <input 
+          type="password" 
+          placeholder="Password" 
+          value={password}
+          onChange={e => set_password(e.target.value)}
+        />
+        <input 
+          type="text" 
+          placeholder="Country"
+          value={country}
+          onChange={e => set_country(e.target.value)}
+        />
+        <button 
+          className={button.outline}
+          type="submit"
+        >Sign up</button>
+      </form>
+    </>
   )
 }

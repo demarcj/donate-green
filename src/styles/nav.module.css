@@ -1,0 +1,25 @@
+.nav{
+  position: absolute;
+  inset: auto 0 0 0;
+  background-color: var(--green);
+}
+
+.nav_list{
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.nav_item{
+  width: 100%;
+  text-align: center;
+}
+
+.nav_text{
+  padding: 15px;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
