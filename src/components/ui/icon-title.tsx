@@ -1,10 +1,11 @@
 import React from "react";
 import styles from 'styles/icon-title.module.css';
+import img from 'earth_icon.png';
 
 export const IconTitle: React.FC = () => {
   return (
-    <div>
-      <div className={styles.img}></div>
+    <div className={styles.icon_title_container}>
+      <img className={styles.img} src={img}/>
       <h1 className={styles.title}>Donate Green</h1>
     </div>
   )
