@@ -15,6 +15,14 @@ export const NavBar: React.FC = () => {
     set_path(active);
   }
 
+  const switcher = {
+    "true": (pathname: string) => {
+      get_path(pathname);
+      return [nav.nav_text, nav.active].join(" ");
+    },
+    "false": () => nav.nav_text
+  };
+
   return (
     <nav className={nav.nav}>
       <ul className={nav.nav_list}>
@@ -22,10 +30,8 @@ export const NavBar: React.FC = () => {
           <NavLink 
             to={`/home`} 
             className={({ isActive }) =>{
-                if(isActive){
-                  get_path(`home`)
-                }
-                return isActive ? [nav.nav_text, nav.active].join(" ") : nav.nav_text
+                const active = isActive ? `true` : `false`;
+                return switcher[active](`home`);
               }
             }
           >
@@ -36,10 +42,8 @@ export const NavBar: React.FC = () => {
           <NavLink 
             to={`/activities`} 
             className={({ isActive }) =>{
-                if(isActive){
-                  get_path(`activities`)
-                }
-                return isActive ? [nav.nav_text, nav.active].join(" ") : nav.nav_text
+                const active = isActive ? `true` : `false`;
+                return switcher[active](`activities`);
               }
             }
           >
@@ -50,10 +54,8 @@ export const NavBar: React.FC = () => {
           <NavLink 
             to={`/profile`} 
             className={({ isActive }) =>{
-                if(isActive){
-                  get_path(`profile`)
-                }
-                return isActive ? [nav.nav_text, nav.active].join(" ") : nav.nav_text
+              const active = isActive ? `true` : `false`;
+              return switcher[active](`profile`);
               }
             }
           >

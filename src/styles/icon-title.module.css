@@ -12,3 +12,11 @@
   text-align: center;
   padding-bottom: 45px;
 }
+
+.green{
+  color: var(--green);
+}
+
+.donate{
+  color: var(--blue);
+}
