@@ -3,6 +3,7 @@ import { IconTitle } from "components/ui";
 import { StartModel } from "interface"
 import start from 'styles/start.module.css';
 import button from 'styles/button.module.css';
+import input from "styles/input.module.css";
 
 export const Start: React.FC<StartModel> = ({route_signup, signin}) => {
   const [ email, set_email ] = useState(``);
@@ -11,13 +12,15 @@ export const Start: React.FC<StartModel> = ({route_signup, signin}) => {
   return (
     <div>
       <IconTitle />
-      <input 
+      <input
+        className={input.bottom_border} 
         type="email" 
         placeholder="Email" 
         value={email}
         onChange={e => set_email(e.target.value)}
       />
-      <input 
+      <input
+        className={input.bottom_border} 
         type="password" 
         placeholder="Password" 
         value={password}

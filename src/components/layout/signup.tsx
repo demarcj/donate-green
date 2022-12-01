@@ -1,6 +1,7 @@
 import React, { FormEvent, useState } from "react";
 import { IconTitle } from "components/ui";
 import { SignupModel } from "interface";
+import input from "styles/input.module.css";
 import button from "styles/button.module.css";
 import icon from "styles/material-icon.module.css";
 
@@ -24,25 +25,29 @@ export const Signup: React.FC<SignupModel> = ({signup, route_signup}) => {
       >navigate_before</span>
       <form onSubmit={handle_submit}>
         <IconTitle />
-        <input 
+        <input
+          className={input.bottom_border}
           type="text"
           placeholder="Name"
           value={name}
           onChange={e => set_name(e.target.value)}
         />
-        <input 
+        <input
+          className={input.bottom_border}
           type="email" 
           placeholder="Email" 
           value={email}
           onChange={e => set_email(e.target.value)}
         />
-        <input 
+        <input
+          className={input.bottom_border}
           type="password" 
           placeholder="Password" 
           value={password}
           onChange={e => set_password(e.target.value)}
         />
-        <input 
+        <input
+          className={input.bottom_border}
           type="text" 
           placeholder="Country"
           value={country}
