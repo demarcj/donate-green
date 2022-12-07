@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import { IconTitle } from "components/ui";
-import { StartModel } from "interface"
+import { useNavigate } from "react-router-dom";
 import start from 'styles/start.module.css';
 import button from 'styles/button.module.css';
 import input from "styles/input.module.css";
 
-export const Start: React.FC<StartModel> = ({route_signup, signin}) => {
+export const Start: React.FC = () => {
   const [ email, set_email ] = useState(``);
   const [ password, set_password ] = useState(``);
+
+  const navigate = useNavigate();
+
+  const signin = () => {
+    const credential = localStorage.getItem(`credential`);
+    if(credential){
+      navigate(`/home`);
+    }
+  }
 
   return (
     <div>
@@ -37,7 +46,7 @@ export const Start: React.FC<StartModel> = ({route_signup, signin}) => {
       </div>
       <button
         className={button.outline}
-        onClick={() => route_signup(`signup_page`)}
+        onClick={() => navigate(`/signup`)}
       >Sign up</button>
     </div>
   )

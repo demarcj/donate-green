@@ -1,27 +1,30 @@
 import React, { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IconTitle } from "components/ui";
-import { SignupModel } from "interface";
 import input from "styles/input.module.css";
 import button from "styles/button.module.css";
 import icon from "styles/material-icon.module.css";
 
-export const Signup: React.FC<SignupModel> = ({signup, route_signup}) => {
+export const Signup: React.FC = () => {
   const [ name, set_name ] = useState(``);
   const [ email, set_email ] = useState(``);
   const [ password, set_password ] = useState(``);
   const [ country, set_country ] = useState(``);
 
+  const navigate = useNavigate();
+
   const handle_submit = (e: FormEvent) => {
     e.preventDefault();
-    signup({name, email, password, country});
-    route_signup(`start_page`);
+    const data = JSON.stringify({name, email, password, country});
+    const credential = localStorage.setItem(`credential`, data);
+    navigate(`/signup`);
   }
 
   return (
     <>
       <span 
         className={[`material-icons`, icon.back].join(` `)}
-        onClick={() => route_signup(`start_page`)}
+        onClick={() => navigate(`/`)}
       >navigate_before</span>
       <form onSubmit={handle_submit}>
         <IconTitle />

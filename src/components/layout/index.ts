@@ -1,6 +1,5 @@
 export * from './activities';
 export * from './home';
-export * from './main';
 export * from './portal';
 export * from './profile';
 export * from './signup';
