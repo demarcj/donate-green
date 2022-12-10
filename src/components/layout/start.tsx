@@ -19,7 +19,7 @@ export const Start: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className={start.start_container}>
       <IconTitle />
       <input
         className={input.bottom_border} 

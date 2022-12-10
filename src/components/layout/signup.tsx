@@ -4,6 +4,7 @@ import { IconTitle } from "components/ui";
 import input from "styles/input.module.css";
 import button from "styles/button.module.css";
 import icon from "styles/material-icon.module.css";
+import start from 'styles/start.module.css';
 
 export const Signup: React.FC = () => {
   const [ name, set_name ] = useState(``);
@@ -21,7 +22,7 @@ export const Signup: React.FC = () => {
   }
 
   return (
-    <>
+    <div className={start.start_container}>
       <span 
         className={[`material-icons`, icon.back].join(` `)}
         onClick={() => navigate(`/`)}
@@ -61,6 +62,6 @@ export const Signup: React.FC = () => {
           type="submit"
         >Sign up</button>
       </form>
-    </>
+    </div>
   )
 }
