@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const is_startpage = window.location.pathname.length <= 1;
 
   return (
-    <main className={start.main}>
+    <main>
       <Routes>
         <Route path="/" element={<Start />} />
         <Route path="/signup" element={<Signup />} />

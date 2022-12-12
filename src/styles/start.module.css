@@ -14,18 +14,6 @@
   background-color: black;
 }
 
-.main{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  width: 960px;
-  max-width: 100%;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 15px;
-  overflow: hidden;
-}
-
 .no_show{
   display: none;
 }

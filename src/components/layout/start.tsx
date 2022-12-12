@@ -12,10 +12,17 @@ export const Start: React.FC = () => {
   const navigate = useNavigate();
 
   const signin = () => {
-    const credential = localStorage.getItem(`credential`);
-    if(credential){
-      navigate(`/home`);
-    }
+    const credential = JSON.parse(localStorage.getItem(`credential`) as string);
+    const has_credential = credential ? `has` : `none`;
+    const signin_switch = {
+      "has": () => {
+        const match_email = credential.email.toLowerCase() === email.toLowerCase() || email === ``;
+        const match_password = credential.password === password || password === ``;
+        return match_email && match_password ? navigate(`/home`) : undefined;
+      },
+      "none": () => undefined
+    };
+    signin_switch[has_credential]();
   }
 
   return (
