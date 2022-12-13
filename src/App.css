@@ -19,6 +19,8 @@ button{
   cursor: pointer;
   width: 100%;
   font-size: var(--font-size);
+  border-radius: 10px;
+  border: none;
 }
 
 input{

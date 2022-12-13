@@ -1,0 +1,19 @@
+.profile{
+  text-align: center;
+}
+
+.divider{
+  height: 2px;
+  background-color: var(--pale-green);
+  width: 100%;
+}
+
+.option_container{
+  display: flex;
+  align-items: center;
+}
+
+.left_container{
+  display: flex;
+  align-items: center;
+}

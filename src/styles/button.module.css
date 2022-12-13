@@ -1,5 +1,4 @@
 .default{
-  border-radius: 10px;
   background-color: var(--green);
   color: white;
   border: none;
@@ -10,4 +9,9 @@
   color: var(--green);
   border: 1px solid var(--green);
   border-radius: 10px;
+}
+
+.signout{
+  color: white;
+  background-color: var(--orange);
 }
