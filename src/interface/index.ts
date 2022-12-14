@@ -1,2 +1,1 @@
-export * from "./start-model";
-export * from "./signup-model";
+export * from "./profile-option-model";
