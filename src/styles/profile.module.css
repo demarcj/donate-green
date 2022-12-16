@@ -6,11 +6,12 @@
   height: 2px;
   background-color: var(--pale-green);
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .option_container{
   display: flex;
-  align-items: center;
+  padding-bottom: 15px;
 }
 
 .left_container{
@@ -21,4 +22,8 @@
 .chevron{
   cursor: pointer;
   margin-left: auto;
+}
+
+.img{
+  margin-right: 15px;
 }

@@ -15,3 +15,7 @@
   color: white;
   background-color: var(--orange);
 }
+
+.container{
+  margin: auto 45px 110px;
+}

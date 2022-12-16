@@ -11,31 +11,33 @@ export const Profile: React.FC = () => {
       <div className={styles.profile_name}>Royce Greenfield</div>
       <div className={styles.divider}></div>
       <ProfileOption 
-        img="test"
+        img="account"
         page_type="Create Fundraiser"
         nav={`/fundraiser/${id}`}
       />
       <ProfileOption 
-        img="test"
+        img="heart"
         page_type="Liked Organiztions"
         nav={`/liked/${id}`}
       />
       <ProfileOption 
-        img="test"
+        img="message"
         page_type="Messages"
         nav={`/messages/${id}`}
       />
       <ProfileOption 
-        img="test"
+        img="profile"
         page_type="Profile Image"
         nav={`/profile-image/${id}`}
       />
       <ProfileOption 
-        img="test"
+        img="wrench"
         page_type="Account"
         nav={`/account/${id}`}
       />
-      <button className={button.signout}>Sign out</button>
+      <div className={button.container}>
+        <button className={button.signout}>Sign out</button>
+      </div>
       <NavBar />
     </>
   )
