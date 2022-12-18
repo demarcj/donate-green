@@ -8,7 +8,6 @@ import input from "styles/input.module.css";
 export const Start: React.FC = () => {
   const [ email, set_email ] = useState(``);
   const [ password, set_password ] = useState(``);
-
   const navigate = useNavigate();
 
   const signin = () => {

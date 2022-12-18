@@ -11,7 +11,6 @@ export const Signup: React.FC = () => {
   const [ email, set_email ] = useState(``);
   const [ password, set_password ] = useState(``);
   const [ country, set_country ] = useState(``);
-
   const navigate = useNavigate();
 
   const handle_submit = (e: FormEvent) => {

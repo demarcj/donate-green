@@ -3,4 +3,7 @@
   color: #183636;
   cursor: pointer;
   display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
 }

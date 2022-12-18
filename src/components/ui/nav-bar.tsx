@@ -10,10 +10,7 @@ import person_active from "images/person_active.png";
 
 export const NavBar: React.FC = () => {
   const [path, set_path] = useState(`home`);
-
-  const get_path = (active: string) => {
-    set_path(active);
-  }
+  const get_path = (active: string) => set_path(active);
 
   const switcher = {
     "true": (pathname: string) => {
@@ -35,7 +32,7 @@ export const NavBar: React.FC = () => {
               }
             }
           >
-            <img src={path.includes(`home`) ? home_active : home} alt="" />
+          <img src={path.includes(`home`) ? home_active : home} alt="" />
           </NavLink>
         </li>
         <li className={nav.nav_item}>
@@ -47,19 +44,19 @@ export const NavBar: React.FC = () => {
               }
             }
           >
-            <img src={path.includes(`activities`) ? growth_active : growth} alt="" />
+          <img src={path.includes(`activities`) ? growth_active : growth} alt="" />
           </NavLink>
         </li>
         <li className={nav.nav_item}>
           <NavLink 
             to={`/profile`} 
             className={({ isActive }) =>{
-              const active = isActive ? `true` : `false`;
-              return switcher[active](`profile`);
+                const active = isActive ? `true` : `false`;
+                return switcher[active](`profile`);
               }
             }
           >
-            <img src={path.includes(`profile`) ? person_active : person} alt="" />
+          <img src={path.includes(`profile`) ? person_active : person} alt="" />
           </NavLink>
         </li>
       </ul>

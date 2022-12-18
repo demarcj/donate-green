@@ -4,7 +4,6 @@ import styles from "styles/profile.module.css";
 import button from "styles/button.module.css";
 
 export const Profile: React.FC = () => {
-  const id = `1234`;
   return (
     <>
       <h1 className={styles.profile}>Profile</h1>
@@ -13,27 +12,27 @@ export const Profile: React.FC = () => {
       <ProfileOption 
         img="account"
         page_type="Create Fundraiser"
-        nav={`/fundraiser/${id}`}
+        nav={`/fundraiser`}
       />
       <ProfileOption 
         img="heart"
         page_type="Liked Organiztions"
-        nav={`/liked/${id}`}
+        nav={`/liked`}
       />
       <ProfileOption 
         img="message"
         page_type="Messages"
-        nav={`/messages/${id}`}
+        nav={`/messages`}
       />
       <ProfileOption 
         img="profile"
         page_type="Profile Image"
-        nav={`/profile-image/${id}`}
+        nav={`/profile-image`}
       />
       <ProfileOption 
         img="wrench"
         page_type="Account"
-        nav={`/account/${id}`}
+        nav={`/account`}
       />
       <div className={button.container}>
         <button className={button.signout}>Sign out</button>
