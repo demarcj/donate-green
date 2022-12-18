@@ -1,10 +1,12 @@
 import React from "react";
-import { NavBar } from "components/ui";
+import { NavBar, NavBack, Header, Divider } from "components/ui";
 
 export const Messages: React.FC = () => {
   return (
     <>
-      <div>Hello</div>
+      <NavBack nav="/profile" />
+      <Header header="Messages" />
+      <Divider />
       <NavBar />
     </>
   )

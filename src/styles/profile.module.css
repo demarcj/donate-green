@@ -2,13 +2,6 @@
   text-align: center;
 }
 
-.divider{
-  height: 2px;
-  background-color: var(--pale-green);
-  width: 100%;
-  margin-bottom: 15px;
-}
-
 .option_container{
   display: flex;
   padding-bottom: 15px;

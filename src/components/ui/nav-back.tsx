@@ -10,7 +10,7 @@ export const NavBack: React.FC<NavBackModel> = ({ nav }) => {
     <>
       <span 
         className={[`material-icons`, icon.back].join(` `)}
-        onClick={() => navigate(`/`)}
+        onClick={() => navigate(nav)}
       >navigate_before</span>
     </>
   )

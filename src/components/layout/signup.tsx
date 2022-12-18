@@ -1,9 +1,8 @@
 import React, { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { IconTitle } from "components/ui";
+import { IconTitle, NavBack } from "components/ui";
 import input from "styles/input.module.css";
 import button from "styles/button.module.css";
-import icon from "styles/material-icon.module.css";
 import start from 'styles/start.module.css';
 
 export const Signup: React.FC = () => {
@@ -15,17 +14,15 @@ export const Signup: React.FC = () => {
 
   const handle_submit = (e: FormEvent) => {
     e.preventDefault();
-    const data = JSON.stringify({name, email, password, country});
-    const credential = localStorage.setItem(`credential`, data);
+    const is_signin = false;
+    const data = JSON.stringify({name, email, password, country, is_signin});
+    localStorage.setItem(`credential`, data);
     navigate(`/signup`);
   }
 
   return (
     <div className={start.start_container}>
-      <span 
-        className={[`material-icons`, icon.back].join(` `)}
-        onClick={() => navigate(`/`)}
-      >navigate_before</span>
+      <NavBack nav="/" />
       <form onSubmit={handle_submit}>
         <IconTitle />
         <input

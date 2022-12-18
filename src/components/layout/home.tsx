@@ -7,6 +7,7 @@ export const Home: React.FC = () => {
   return (
     <div className={styles.home_container}>
       <Search />
+      <h1>Help heal the world one community at a time</h1>
       <Organization />
       <NavBar />
     </div>
