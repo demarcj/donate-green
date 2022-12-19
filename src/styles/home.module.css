@@ -2,3 +2,8 @@
   overflow-y: scroll;
   height: 100vh;
 }
+
+.header{
+  padding-bottom: 30px;
+  font-weight: 400;
+}

@@ -12,4 +12,12 @@
 
 .img{
   width: 100%;
+  cursor: pointer;
+}
+
+.progress{
+  height: 5px;
+  border-radius: 500px;
+  background-color: var(--orange);
+  width: 100%;
 }

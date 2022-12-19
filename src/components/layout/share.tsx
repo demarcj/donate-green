@@ -1,10 +1,11 @@
 import React from "react";
-import { NavBar, Option, Divider, ProfileImgUI, Header } from "components/ui";
+import { NavBar, Option, Divider, Header, NavBack } from "components/ui";
 import { useNavigate } from "react-router-dom";
 import { CredentialModel } from "interface";
+import styles from "styles/profile.module.css";
 import button from "styles/button.module.css";
 
-export const Profile: React.FC = () => {
+export const Share: React.FC = () => {
   const navigate = useNavigate();
   const credential: CredentialModel = JSON.parse(localStorage.getItem(`credential`) as string);
 
@@ -16,40 +17,34 @@ export const Profile: React.FC = () => {
 
   return (
     <>
-      <Header header="Profile" />
-      <ProfileImgUI />
+      <Header header="Share" />
+      <NavBack nav="activities" />
       <Divider />
       <Option 
-        img="account"
-        page="Create Fundraiser"
+        img="facebook"
+        page="Facebook"
         nav={`/profile/fundraiser`}
       />
       <Option 
-        img="heart"
-        page="Liked Organiztions"
+        img="instagram"
+        page="Instagram"
         nav={`/profile/liked`}
       />
       <Option 
         img="message"
-        page="Messages"
+        page="Message"
         nav={`/profile/messages`}
       />
       <Option 
-        img="profile"
-        page="Profile Image"
+        img="email"
+        page="Email"
         nav={`/profile/profile-image`}
       />
       <Option 
-        img="wrench"
-        page="Account"
+        img="link"
+        page="Copy Link"
         nav={`/profile/account`}
       />
-      <div className={button.container}>
-        <button 
-          className={button.signout}
-          onClick={signout}
-        >Sign out</button>
-      </div>
       <NavBar />
     </>
   )

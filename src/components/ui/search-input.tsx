@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "styles/input.module.css"
+import search from "images/search.png";
+import styles from "styles/search.module.css";
 
 export const Search: React.FC = () => {
   return (
-    <>
+    <div className={styles.search_container}>
       <input
         className={styles.search}
         type="search" 
@@ -11,6 +12,7 @@ export const Search: React.FC = () => {
         id="search" 
         placeholder="Search Organizations"
       />
-    </>
+      <img className={styles.search_icon} src={search} alt="" />
+    </div>
   )
 }

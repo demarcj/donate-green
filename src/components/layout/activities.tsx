@@ -1,10 +1,11 @@
 import React from "react";
-import { NavBar, Header } from "components/ui";
+import { NavBar, Header, ActivitiesUI } from "components/ui";
 
 export const Activities: React.FC = () => {
   return (
     <>
       <Header header="Activities" />
+      <ActivitiesUI />
       <NavBar />
     </>
   )

@@ -1,0 +1,11 @@
+.profile_img_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.img{
+  border-radius: 50%;
+  width: 60px;
+}

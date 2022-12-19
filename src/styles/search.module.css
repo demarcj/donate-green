@@ -1,0 +1,17 @@
+.search_container{
+  position: relative;
+  padding: 30px 0;
+}
+
+.search{
+  border-radius: 500px;
+  border: 1px solid var(--gray);
+  padding-left: 60px;
+  margin-bottom: 0;
+}
+
+.search_icon{
+  position: absolute;
+  inset: 42px auto auto 15px;
+  cursor: pointer;
+}

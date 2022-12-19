@@ -7,4 +7,5 @@ export * from './messages';
 export * from './profile';
 export * from './profile-image';
 export * from './signup';
+export * from './share';
 export * from './start'; 

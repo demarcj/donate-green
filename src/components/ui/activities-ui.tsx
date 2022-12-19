@@ -1,14 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"
 import styles from "styles/organization.module.css";
 import wood from "images/wood.jpg";
 
-export const Organization: React.FC = () => {
+export const ActivitiesUI: React.FC = () => {
+  const navigate = useNavigate();
 
   return (
     <div className={styles.organization_container}>
       <div className={styles.img_container}>
         <img
           className={styles.img}
+          onClick={() => navigate(`/activities/share`)}
           src={wood} 
           alt="" 
         />

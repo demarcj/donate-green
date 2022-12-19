@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuid } from 'uuid';
 import { IconTitle, NavBack } from "components/ui";
 import input from "styles/input.module.css";
 import button from "styles/button.module.css";
@@ -15,9 +16,10 @@ export const Signup: React.FC = () => {
   const handle_submit = (e: FormEvent) => {
     e.preventDefault();
     const is_signin = false;
-    const data = JSON.stringify({name, email, password, country, is_signin});
+    const id = uuid();
+    const data = JSON.stringify({id, name, email, password, country, is_signin});
     localStorage.setItem(`credential`, data);
-    navigate(`/signup`);
+    navigate(`/`);
   }
 
   return (
@@ -31,6 +33,7 @@ export const Signup: React.FC = () => {
           placeholder="Name"
           value={name}
           onChange={e => set_name(e.target.value)}
+          required
         />
         <input
           className={input.bottom_border}
@@ -38,6 +41,7 @@ export const Signup: React.FC = () => {
           placeholder="Email" 
           value={email}
           onChange={e => set_email(e.target.value)}
+          required
         />
         <input
           className={input.bottom_border}
@@ -45,6 +49,7 @@ export const Signup: React.FC = () => {
           placeholder="Password" 
           value={password}
           onChange={e => set_password(e.target.value)}
+          required
         />
         <input
           className={input.bottom_border}
@@ -52,6 +57,7 @@ export const Signup: React.FC = () => {
           placeholder="Country"
           value={country}
           onChange={e => set_country(e.target.value)}
+          required
         />
         <button 
           className={button.outline}

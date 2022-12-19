@@ -4,9 +4,3 @@
   border-right: none;
   padding-left: 0;
 }
-
-.search{
-  border-radius: 500px;
-  margin: 30px 0;
-  border: 1px solid var(--gray);
-}
