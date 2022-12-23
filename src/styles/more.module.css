@@ -1,4 +1,8 @@
+.container{
+  text-align: right;
+}
 .more{
   color: var(--orange);
-  text-align: right;
+  cursor: pointer;
+  display: inline-block;
 }

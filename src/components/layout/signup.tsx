@@ -1,6 +1,5 @@
 import React, { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuid } from 'uuid';
 import { IconTitle, NavBack } from "components/ui";
 import input from "styles/input.module.css";
 import button from "styles/button.module.css";
@@ -16,7 +15,7 @@ export const Signup: React.FC = () => {
   const handle_submit = (e: FormEvent) => {
     e.preventDefault();
     const is_signin = false;
-    const id = uuid();
+    const id = crypto.randomUUID();
     const data = JSON.stringify({id, name, email, password, country, is_signin});
     localStorage.setItem(`credential`, data);
     navigate(`/`);

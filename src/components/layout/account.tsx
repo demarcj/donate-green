@@ -4,8 +4,6 @@ import input from "styles/input.module.css";
 import button from "styles/button.module.css";
 import { useNavigate } from "react-router-dom";
 
-
-
 export const Account: React.FC = () => {
   const [ name, set_name ] = useState(``);
   const [ email, set_email ] = useState(``);
