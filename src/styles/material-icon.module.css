@@ -4,6 +4,7 @@
   cursor: pointer;
   display: inline-block;
   position: absolute;
+  top: 0;
 }
 
 .favorite_container{

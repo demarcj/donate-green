@@ -1,0 +1,14 @@
+.placeholder{
+  background-color: var(--blue);
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.img, .placeholder{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}

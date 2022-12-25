@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "styles/profile.module.css";
+import styles from "styles/option.module.css";
 import { OptionModel, ProfileImg } from "interface";
 import account from "images/account.png";
 import heart from "images/heart.png";

@@ -1,8 +1,35 @@
+.container{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.body{
+  padding-bottom: 32px;
+}
+
 .label{
   border: 1px solid var(--pale-green);
   padding: 10px;
+  cursor: pointer;
 }
 
 .input{
   opacity: 0;
+  margin: auto;
+  padding: initial;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.form{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  position: relative;
 }

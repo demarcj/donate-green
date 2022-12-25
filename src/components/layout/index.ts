@@ -2,8 +2,9 @@ export * from './account'
 export * from './activities';
 export * from './fundraiser';
 export * from './home';
-export * from './liked'
+export * from './liked';
 export * from './messages';
+export * from './password';
 export * from './profile';
 export * from './profile-image';
 export * from './signup';

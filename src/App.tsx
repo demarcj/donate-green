@@ -1,16 +1,17 @@
 import React from 'react';
 import { 
-  Start, 
-  Signup, 
-  Home, 
-  Profile, 
   Activities, 
-  Fundraiser, 
-  Liked, 
-  Messages, 
-  ProfileImage, 
   Account, 
-  Share 
+  Fundraiser, 
+  Home, 
+  Liked, 
+  Messages,
+  Password,
+  Profile, 
+  ProfileImage, 
+  Share, 
+  Signup, 
+  Start 
 } from "components/layout";
 import { Route, Routes, Navigate } from "react-router-dom";
 import './App.css';
@@ -24,6 +25,7 @@ const App: React.FC = () => (
       <Route path="activities/share" element={<Share />} />
       <Route path="profile" element={<Profile />} />
       <Route path="profile/account" element={<Account />} />
+      <Route path="profile/account/password" element={<Password />} />
       <Route path="profile/fundraiser" element={<Fundraiser />} />
       <Route path="profile/liked" element={<Liked />} />
       <Route path="profile/messages" element={<Messages />} />

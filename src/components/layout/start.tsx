@@ -24,6 +24,7 @@ export const Start: React.FC = () => {
   }
 
   const signin = (e: FormEvent) => {
+    e.preventDefault();
     const has_credential = credential ? `has` : `none`;
     const signin_switch = {
       "has": () => {

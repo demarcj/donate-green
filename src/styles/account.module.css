@@ -1,0 +1,16 @@
+.password_container{
+  position: relative;
+}
+.password{
+  padding-right: 60px;
+  margin-bottom: 0;
+}
+.change{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--orange);
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -11,3 +11,4 @@ export * from "./option";
 export * from "./organization";
 export * from "./save";
 export * from "./search-input"; 
+export * from "./user-image";
