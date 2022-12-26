@@ -1,4 +1,5 @@
 export * from "./activities-ui";
+export * from "./create-fundraiser";
 export * from "./divider"
 export * from "./icon-title";
 export * from "./header";

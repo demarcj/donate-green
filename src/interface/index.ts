@@ -1,3 +1,4 @@
+export * from "./create-fundraiser-model";
 export * from "./credential-model";
 export * from "./header-model";
 export * from "./home-model";

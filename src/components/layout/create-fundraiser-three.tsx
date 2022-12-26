@@ -1,20 +1,22 @@
 import React from "react";
-import { NavBar, Header, Divider, NavBack } from "components/ui";
-import { useNavigate } from "react-router-dom";
-import button from 'styles/button.module.css';
+import { CreateFundraiser } from "components/ui";
+import { useLocation } from "react-router-dom";
 
 export const CreateFundraiserThree: React.FC = () => {
-  const navigate = useNavigate();
+  const pathname = window.location.pathname;
+  const path = pathname.substring(0, (pathname.length -5));
+  const search = useLocation().search;
+  const id = new URLSearchParams(search).get(`id`);
 
   return (
-    <>
-      <NavBack nav="/profile/fundraiser" />
-      <Header header="Create Fundraiser" />
-      <Divider />
-      <button 
-        className={button.outline}
-      >Continue</button>
-      <NavBar />
-    </>
+    <CreateFundraiser 
+      previous_page={`${path}two?id=${id}`}
+      next_page={`${path}four?id=${id}`}
+      page_number={1}
+    >
+      <>
+        <div>Hello</div>
+      </>
+    </CreateFundraiser>
   )
 }

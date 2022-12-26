@@ -1,6 +1,5 @@
 export * from './account'
 export * from './activities';
-export * from './create-fundraiser';
 export * from './create-fundraiser-one';
 export * from './create-fundraiser-two';
 export * from './create-fundraiser-three';
