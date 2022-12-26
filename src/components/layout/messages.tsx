@@ -9,7 +9,7 @@ export const Messages: React.FC = () => {
       message: `Something Something`,
       id: crypto.randomUUID()
     }
-  ]
+  ];
   return (
     <>
       <NavBack nav="/profile" />

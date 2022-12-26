@@ -1,5 +1,7 @@
 export * from "./credential-model";
 export * from "./header-model";
+export * from "./home-model";
+export * from "./img-liked-model";
 export * from "./message-model";
 export * from "./nav-back-model";
 export * from "./option-model";

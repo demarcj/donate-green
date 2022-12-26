@@ -1,12 +1,18 @@
 import React from 'react';
 import { 
   Activities, 
-  Account, 
+  Account,
+  CreateFundraiserOne,
+  CreateFundraiserTwo,
+  CreateFundraiserThree,
+  CreateFundraiserFour, 
   Fundraiser, 
   Home, 
   Liked, 
   Messages,
+  Organization,
   Password,
+  Payment,
   Profile, 
   ProfileImage, 
   Share, 
@@ -21,12 +27,18 @@ const App: React.FC = () => (
     <Routes>
       <Route path="/" element={<Start />} />
       <Route path="home" element={<Home />} />
+      <Route path="home/organization/:name" element={<Organization />} />
+      <Route path="home/organization/:name/payment" element={<Payment />} />
       <Route path="activities" element={<Activities />} />
       <Route path="activities/share" element={<Share />} />
       <Route path="profile" element={<Profile />} />
       <Route path="profile/account" element={<Account />} />
       <Route path="profile/account/password" element={<Password />} />
       <Route path="profile/fundraiser" element={<Fundraiser />} />
+      <Route path="profile/fundraiser/create/:name/one" element={<CreateFundraiserOne />} />
+      <Route path="profile/fundraiser/create/:name/two" element={<CreateFundraiserTwo />} />
+      <Route path="profile/fundraiser/create/:name/three" element={<CreateFundraiserThree />} />
+      <Route path="profile/fundraiser/create/:name/four" element={<CreateFundraiserFour />} />
       <Route path="profile/liked" element={<Liked />} />
       <Route path="profile/messages" element={<Messages />} />
       <Route path="profile/profile-image" element={<ProfileImage />} />

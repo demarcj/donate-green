@@ -1,0 +1,36 @@
+.container{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.favorited{
+  color: var(--green);
+}
+
+.not_favorited{
+  color: #000;
+}
+
+.img_container{
+  position: relative;
+  display: block;
+}
+
+.link{
+  display: block;
+}
+
+.img{
+  width: 100%;
+  cursor: pointer;
+}

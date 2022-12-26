@@ -7,11 +7,9 @@ export const NavBack: React.FC<NavBackModel> = ({ nav }) => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <span 
-        className={[`material-icons`, icon.back].join(` `)}
-        onClick={() => navigate(nav)}
-      >navigate_before</span>
-    </>
+    <span 
+      className={[`material-icons`, icon.back].join(` `)}
+      onClick={() => navigate(nav)}
+    >navigate_before</span>
   )
 }

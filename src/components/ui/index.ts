@@ -2,13 +2,14 @@ export * from "./activities-ui";
 export * from "./divider"
 export * from "./icon-title";
 export * from "./header";
+export * from "./home-ui";
+export * from "./img-liked";
 export * from "./message-area";
 export * from "./more";
 export * from "./nav-back";
 export * from "./nav-bar";
 export * from "./profile-img-ui";
 export * from "./option";
-export * from "./organization";
 export * from "./save";
 export * from "./search-input"; 
 export * from "./user-image";
