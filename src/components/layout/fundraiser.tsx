@@ -16,10 +16,17 @@ export const Fundraiser: React.FC = () => {
       <h2 className={styles.header}>Select a nonprofit organiztion</h2>
       {
         OrganizationData.map(data => (
-          <div key={data.id}>
-            <Link to={`/profile/fundraiser/create/${url_converter(data.name)}/one?id=${data.id}`}>
-              <img src={wood} alt="" />
+          <div className={styles.container} key={data.id}>
+            <Link
+              className={styles.img_container}
+              to={`/profile/fundraiser/create/${url_converter(data.name)}/one?id=${data.id}`}
+            >
+              <img className={styles.img} src={wood} alt="" />
             </Link>
+            <div className={styles.content_container}>
+              <div>{data.name}</div>
+              <div>{data.location}</div>
+            </div>
           </div>
         ))
       }
