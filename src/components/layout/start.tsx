@@ -11,7 +11,7 @@ import input from "styles/input.module.css";
 export const Start: React.FC = () => {
   const credential: CredentialModel = JSON.parse(localStorage.getItem(`credential`) as string);
   const navigate = useNavigate();
-  useEffect(() => (credential.is_signin ? navigate(`/home`) : undefined));
+  useEffect(() => (credential?.is_signin ? navigate(`/home`) : undefined));
   
   const [ email, set_email ] = useState(``);
   const [ password, set_password ] = useState(``);
