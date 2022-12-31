@@ -1,5 +1,5 @@
 import React from "react";
-import { CreateFundraiser } from "components/ui";
+import { CreateFundraiser, UploadButton } from "components/ui";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export const CreateFundraiserThree: React.FC = () => {
@@ -20,6 +20,7 @@ export const CreateFundraiserThree: React.FC = () => {
     >
       <>
         <div>Select an image to represent your fundraiser</div>
+        <UploadButton />
       </>
     </CreateFundraiser>
   )

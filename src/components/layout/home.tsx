@@ -14,7 +14,7 @@ export const Home: React.FC = () => {
           <HomeUI
             key={org.id}
             id={org.id}
-            name={org.name}
+            title={org.title}
             location={org.location}
             donation_goal={org.donation_goal}
             donation_amount={org.donation_amount}

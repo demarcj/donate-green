@@ -1,0 +1,5 @@
+.textarea{
+  border: 2px solid var(--pale-green);
+  border-radius: 5px;
+  padding: 5px 15px;
+}

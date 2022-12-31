@@ -7,5 +7,7 @@ export * from "./message-model";
 export * from "./nav-back-model";
 export * from "./option-model";
 export * from "./profile-img-model";
+export * from "./progress-bar-model";
 export * from "./save-model";
+export * from "./upload-button-model";
 export * from "./user-image-model";

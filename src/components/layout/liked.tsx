@@ -14,9 +14,10 @@ export const Liked: React.FC = () => {
           <div key={org.id} className={styles.container}>
             <ImgLiked 
               id={org.id}
+              liked_organization={org.liked_organization}
             />
             <div className={styles.content_container}>
-              <div>{org.name}</div>
+              <div>{org.title}</div>
               <div>{org.location}</div>
             </div>
           </div>

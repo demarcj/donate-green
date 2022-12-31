@@ -3,4 +3,5 @@ export interface ImgLikedModel{
   name?: string;
   url?: string;
   img?: string
+  liked_organization: boolean;
 }

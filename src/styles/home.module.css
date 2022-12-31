@@ -14,30 +14,3 @@
   padding: 15px;
   margin-bottom: 45px;
 }
-
-.bottom_container{
-  display: flex;
-  justify-content: space-between;
-}
-
-.progress_container{
-  border-radius: 500px;
-  overflow: hidden;
-  height: 5px;
-  position: relative;
-}
-
-.progress_max{
-  opacity: .5;
-  height: 100%;
-  background-color: var(--orange);
-}
-
-.progress{
-  height: 100%;
-  border-radius: 500px;
-  background-color: var(--orange);
-  position: absolute;
-  z-index: 1;
-  top: 0;
-}

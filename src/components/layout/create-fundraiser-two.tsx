@@ -1,6 +1,7 @@
 import React, { useState }from "react";
 import { CreateFundraiser } from "components/ui";
 import { useLocation, useNavigate } from "react-router-dom";
+import styles from "styles/create-fundraiser.module.css";
 import input from "styles/input.module.css";
 
 export const CreateFundraiserTwo: React.FC = () => {
@@ -34,6 +35,7 @@ export const CreateFundraiserTwo: React.FC = () => {
         <div>Why are you creating this fundraiser?</div>
         <textarea 
           placeholder="Please explain"
+          className={styles.textarea}
           onChange={ e => set_reason(e.target.value)} 
           cols={30} 
           rows={10}

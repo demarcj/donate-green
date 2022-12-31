@@ -1,6 +1,6 @@
 export interface HomeModel {
   id: string;
-  name: string;
+  title: string;
   location: string;
   donation_goal: number;
   donation_amount: number;

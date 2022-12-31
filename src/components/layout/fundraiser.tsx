@@ -1,12 +1,20 @@
 import React from "react";
 import { NavBar, NavBack, Header, Divider, Search } from "components/ui";
 import { OrganizationData } from "temp";
+import { HomeModel } from "interface";
 import { url_converter } from "functions"
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "styles/fundraiser.module.css";
 import wood from "images/wood.jpg";
 
 export const Fundraiser: React.FC = () => {
+  const navigate = useNavigate();
+  const select = (data: HomeModel) => {
+    const { title, id } = data;
+    localStorage.setItem(`create`, JSON.stringify({ title }));
+    navigate(`/profile/fundraiser/create/${url_converter(title)}/one?id=${id}`);
+  };
+
   return (
     <>
       <NavBack nav="/profile" />
@@ -16,15 +24,14 @@ export const Fundraiser: React.FC = () => {
       <h2 className={styles.header}>Select a nonprofit organiztion</h2>
       {
         OrganizationData.map(data => (
-          <div className={styles.container} key={data.id}>
-            <Link
-              className={styles.img_container}
-              to={`/profile/fundraiser/create/${url_converter(data.name)}/one?id=${data.id}`}
-            >
-              <img className={styles.img} src={wood} alt="" />
-            </Link>
+          <div 
+            className={styles.container} 
+            key={data.id}
+            onClick={() => select(data)}
+          >
+            <img className={styles.img} src={wood} alt="" />
             <div className={styles.content_container}>
-              <div>{data.name}</div>
+              <div>{data.title}</div>
               <div>{data.location}</div>
             </div>
           </div>

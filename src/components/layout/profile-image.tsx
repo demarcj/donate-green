@@ -1,5 +1,5 @@
 import React from "react";
-import { NavBar, NavBack, Header, Divider, ProfileImgUI, Save } from "components/ui";
+import { NavBar, NavBack, Header, Divider, ProfileImgUI, Save, UploadButton } from "components/ui";
 import styles from "styles/profile-image.module.css";
 
 export const ProfileImage: React.FC = () => {
@@ -12,14 +12,7 @@ export const ProfileImage: React.FC = () => {
         <ProfileImgUI />
         <Divider />
       </div>
-      <div className={styles.body}>
-        <form className={styles.form}>
-          <div className={styles.button}>
-            <label className={styles.label} htmlFor="upload">Upload image</label>
-            <input className={styles.input} type="file" name="upload" id="upload" accept=".jpg, .jpeg, .png"  />
-          </div>
-        </form>
-      </div>
+      <UploadButton />
       <NavBar />
     </div>
   )

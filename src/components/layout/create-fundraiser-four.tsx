@@ -1,5 +1,5 @@
 import React from "react";
-import { CreateFundraiser } from "components/ui";
+import { CreateFundraiser, More, ProgressBar } from "components/ui";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export const CreateFundraiserFour: React.FC = () => {
@@ -19,8 +19,13 @@ export const CreateFundraiserFour: React.FC = () => {
       emit={emit}
     >
       <>
-        <div>What's the title of your fundraiser?</div>
+        <ProgressBar 
+          donation_amount={0}
+          donation_goal={100}
+          location={`USA`}
+        />
         <div>Why are you creating this fundraiser?</div>
+        <More />
       </>
     </CreateFundraiser>
   )

@@ -4,9 +4,9 @@ import styles from 'styles/img-liked.module.css';
 import wood from "images/wood.jpg";
 import { ImgLikedModel } from "interface";
 
-export const ImgLiked: React.FC<ImgLikedModel> = ({id, name, url, img}) => {
-  const [favorite, set_favorite] = useState(`favorite`);
-  const [border, set_border] = useState(styles.favorited);
+export const ImgLiked: React.FC<ImgLikedModel> = ({id, name, url, img, liked_organization}) => {
+  const [favorite, set_favorite] = useState(liked_organization ? `favorite` : `favorite_border`);
+  const [border, set_border] = useState(liked_organization ? styles.favorited : styles.not_favorited);
 
   const navigate = useNavigate();
   const src = img ? img : wood;

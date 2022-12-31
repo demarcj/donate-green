@@ -10,7 +10,7 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
   }
 
   return (
-    <>
+    <div>
       <NavBack nav={previous_page} />
       <Header header="Create Fundraiser" />
       <Divider />
@@ -26,6 +26,6 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
         >{page_number < 4 ? `Continue` : `Create`}</button>
       </div>
       <NavBar />
-    </>
+    </div>
   )
 }
