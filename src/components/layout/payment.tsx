@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { NavBar, Header, Divider, NavBack } from "components/ui";
+import { NavBar, Header, Divider, NavBack, DonateInput } from "components/ui";
 
 export const Payment: React.FC = () => {
   const search = useLocation().search;
@@ -15,6 +15,7 @@ export const Payment: React.FC = () => {
       <NavBack nav={url} />
       <Header header="Payment" />
       <Divider />
+      <DonateInput />
       <NavBar />
     </>
   )

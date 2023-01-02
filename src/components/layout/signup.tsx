@@ -1,6 +1,8 @@
 import React, { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IconTitle, NavBack } from "components/ui";
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 import input from "styles/input.module.css";
 import button from "styles/button.module.css";
 import start from 'styles/start.module.css';
@@ -10,7 +12,9 @@ export const Signup: React.FC = () => {
   const [ email, set_email ] = useState(``);
   const [ password, set_password ] = useState(``);
   const [ country, set_country ] = useState(``);
+
   const navigate = useNavigate();
+  const countries = [`USA`, `UK`, `Canada`, `Australia`].sort();
 
   const handle_submit = (e: FormEvent) => {
     e.preventDefault();
@@ -50,13 +54,15 @@ export const Signup: React.FC = () => {
           onChange={e => set_password(e.target.value)}
           required
         />
-        <input
-          className={input.bottom_border}
-          type="text" 
-          placeholder="Country"
-          value={country}
-          onChange={e => set_country(e.target.value)}
-          required
+        <Autocomplete 
+          options={countries} 
+          clearOnEscape
+          freeSolo
+          sx={{mb: `30px`}}
+          onChange={(event: any, newValue: string | null) => {
+            set_country(newValue as string);
+          }}
+          renderInput={(params) => <TextField variant="standard" {...params} label="Country" />}
         />
         <button 
           className={button.outline}

@@ -1,5 +1,6 @@
 export * from "./create-fundraiser-model";
 export * from "./credential-model";
+export * from "./donate-input-model";
 export * from "./header-model";
 export * from "./home-model";
 export * from "./img-liked-model";

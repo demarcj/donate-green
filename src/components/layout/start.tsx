@@ -9,14 +9,15 @@ import button from 'styles/button.module.css';
 import input from "styles/input.module.css";
 
 export const Start: React.FC = () => {
+  const [ email, set_email ] = useState(``);
+  const [ password, set_password ] = useState(``);
+
   const credential: CredentialModel = JSON.parse(localStorage.getItem(`credential`) as string);
   const navigate = useNavigate();
   useEffect(() => (credential?.is_signin ? navigate(`/home`) : undefined));
-  
-  const [ email, set_email ] = useState(``);
-  const [ password, set_password ] = useState(``);
-  
   const wrong_input = () => toast("The email and password don't match. Please try again.");
+  
+  
   const loggedin = () => {
     credential.is_signin = true;
     localStorage.setItem(`credential`, JSON.stringify(credential));
