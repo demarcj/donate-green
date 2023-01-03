@@ -1,0 +1,28 @@
+.main_container{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.container{
+  border: 2px solid var(--pale-green);
+  border-bottom: none;
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header_container{
+  text-align: center;
+}
+
+.total_container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button{
+  margin-top: auto;
+  margin-bottom: 30px;
+}

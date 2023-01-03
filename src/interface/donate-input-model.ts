@@ -1,3 +1,4 @@
 export interface DonateInputModel {
-  amount: number;
+  text: string;
+  get_donate_amount: (num: number) => void;
 }
