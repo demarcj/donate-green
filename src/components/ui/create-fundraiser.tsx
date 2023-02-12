@@ -9,11 +9,17 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
     "display": page_number === 1 ? `block` : `none`,
   }
 
+  const pathname = window.location.pathname;
+  const start_title = pathname.replace(`/profile/fundraiser/create/`, ``);
+  const end_title_index = start_title.lastIndexOf(`/`);
+  const title = start_title.substring(0, end_title_index)
+  
   return (
-    <div>
+    <>
       <NavBack nav={previous_page} />
       <Header header="Create Fundraiser" />
       <Divider />
+      <h2 className={styles.title}>{title.replaceAll(`_`, ` `)}</h2>
       {children}
       <div className={button.container}>
         <div
@@ -26,6 +32,6 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
         >{page_number < 4 ? `Continue` : `Create`}</button>
       </div>
       <NavBar />
-    </div>
+    </>
   )
 }

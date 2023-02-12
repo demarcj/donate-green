@@ -14,24 +14,14 @@ export const Share: React.FC = () => {
         social="facebook"
       />
       <Option 
-        img="instagram"
-        text="Instagram"
-        social="instagram"
-      />
-      <Option 
         img="message"
         text="Message"
-        social="facebook"
+        social="whatsapp"
       />
       <Option 
         img="email"
         text="Email"
-        social="facebook"
-      />
-      <Option 
-        img="link"
-        text="Copy Link"
-        social="facebook"
+        social="email"
       />
       <NavBar />
     </>

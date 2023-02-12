@@ -11,6 +11,12 @@
   margin-bottom: 30px;
 }
 
+.title{
+  text-align: center;
+  text-transform: capitalize;
+  padding-bottom: 45px;
+}
+
 .img{
   width: 100%;
   border-radius: 10px;
@@ -19,4 +25,5 @@
 
 .disclaimer{
   text-align: center;
+  padding-bottom: 15px;
 }

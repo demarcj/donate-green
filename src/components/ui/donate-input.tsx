@@ -29,7 +29,7 @@ export const DonateInput: React.FC<DonateInputModel> = ({text, get_donate_amount
 
   const [ add_style, set_add_style ] = useState(add_default);
   const [ minus_style, set_minus_style ] = useState(minus_default);
-  const [ amount, set_amount ] = useState(0);
+  const [ amount, set_amount ] = useState(`$0`);
   const [ selected, set_selected ] = useState(`add`);
 
   const handle_selected = (
@@ -39,32 +39,36 @@ export const DonateInput: React.FC<DonateInputModel> = ({text, get_donate_amount
     return newAlignment ? set_selected(newAlignment) : undefined
   }
   const add = () => {
-    const num = amount + 1;
+    const convert_num = amount.replace(`$`, ``).replaceAll(`,`, ``);
+    const num = `$${new Intl.NumberFormat().format(parseInt(convert_num) + 1)}`;
     set_amount(num);
-    set_add_style(add_default);
-    set_minus_style(minus_default);
+    // set_add_style(add_default);
+    // set_minus_style(minus_default);
     get_donate_amount(num);
   };
 
   const minus = () => {
-    const num = amount === 0 ? 0 : amount - 1;
+    const convert_num = amount.replace(`$`, ``).replaceAll(`,`, ``);
+    const num = convert_num === `0` ? `$0` : `$${new Intl.NumberFormat().format(parseInt(convert_num) - 1)}`;
     set_amount(num);
-    set_add_style(add_styled);
-    set_minus_style(minus_styled);
+    // set_add_style(add_styled);
+    // set_minus_style(minus_styled);
     get_donate_amount(num);
   };
 
   const set_donation = (e: React.FormEvent<EventTarget>) => {
-    const regex = /[0-9]/g;
-    const donation = regex.test((e.target as HTMLInputElement).value) ? parseInt((e.target as HTMLInputElement).value) : amount;
-    const num = (e.target as HTMLInputElement).value === `` ? 0 : donation;
+    const regex = /[$0-9,]/g;
+    const value = (e.target as HTMLInputElement).value;
+    const convert_num = value.replace(`$`, ``).replaceAll(`,`, ``);
+    const donation = regex.test(convert_num) ? parseInt(convert_num) : parseInt(amount);
+    const num = value === `` || value === `$` ? `$0` : `$${new Intl.NumberFormat().format(donation)}`;
     set_amount(num);
     get_donate_amount(num);
   };
 
   return (
     <>
-      { text ? <div>{text}</div> : ``}
+      { text ? <div className={styles.header}>{text}</div> : ``}
       <div className={styles.container}>
         <div className={styles.button}>
           <ToggleButtonGroup 
@@ -91,6 +95,7 @@ export const DonateInput: React.FC<DonateInputModel> = ({text, get_donate_amount
         <input 
           className={styles.input}
           value={amount}
+          inputMode="numeric"
           onChange={set_donation}
         />
       </div>

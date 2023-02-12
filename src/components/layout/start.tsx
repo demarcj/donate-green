@@ -24,18 +24,15 @@ export const Start: React.FC = () => {
     navigate(`/home`);
   }
 
+  const signin_switch = () => {
+    const match_email = credential.email.toLowerCase() === email.toLowerCase();
+    const match_password = credential.password === password;
+    match_email && match_password ? loggedin() : wrong_input();
+  }
+
   const signin = (e: FormEvent) => {
     e.preventDefault();
-    const has_credential = credential ? `has` : `none`;
-    const signin_switch = {
-      "has": () => {
-        const match_email = credential.email.toLowerCase() === email.toLowerCase();
-        const match_password = credential.password === password;
-        return match_email && match_password ? loggedin() : wrong_input();
-      },
-      "none": () => undefined
-    };
-    signin_switch[has_credential]();
+    credential && signin_switch();
   }
 
   return (

@@ -8,9 +8,7 @@ export const CreateFundraiserThree: React.FC = () => {
   const path = pathname.substring(0, (pathname.length -5));
   const search = useLocation().search;
   const id = new URLSearchParams(search).get(`id`);
-  const emit = () => {
-    navigate(`${path}four?id=${id}`);
-  }
+  const emit = () => navigate(`${path}four?id=${id}`);
 
   return (
     <CreateFundraiser 
@@ -19,7 +17,7 @@ export const CreateFundraiserThree: React.FC = () => {
       emit={emit}
     >
       <>
-        <div>Select an image to represent your fundraiser</div>
+        <div>Select an image to represent your fundraiser.</div>
         <UploadButton />
       </>
     </CreateFundraiser>

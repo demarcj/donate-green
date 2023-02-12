@@ -7,6 +7,11 @@ import input from "styles/input.module.css";
 import button from "styles/button.module.css";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 
+interface credential {
+  name: string; 
+  email: string
+}
+
 export const Account: React.FC = () => {
   const [ name, set_name ] = useState(``);
   const [ email, set_email ] = useState(``);
@@ -23,29 +28,32 @@ export const Account: React.FC = () => {
   
   useEffect(() => is_success === `true` ? confirmed() : undefined);
 
-  const save = () => {
-    const get_name = name ? name : credential.name;
-    const get_email = email ? email : credential.email;
-    const valid = get_email && get_name ? `success` : `is_empty`;
-    // type AccountSaveConst = "name" | "email";
-    const save_switch = {
-      is_empty: () => toast("Both the name and email input are empty!"),
-      success: () => {
-        // const saved_items = [`name`, `email`].filter(item => credential[item as AccountSaveConst].includes());
-        const data = JSON.stringify({
-          id: credential.id, 
-          name: get_name, 
-          email: get_email, 
-          password: credential.password, 
-          country: credential.country, 
-          is_signin: credential.is_signin
-        });
-        localStorage.setItem(`credential`, data);
-        // toast(`Your new '${saved_items.join(` and `)}' has been saved!`)
-      }
-    }
-    save_switch[valid]();
+  const is_valid = (name: string = ``, email: string = ``) => {
+    type AccountItem = "name" | "email";
+    const items: credential = { name, email }; 
+    const saved_items = (Object.keys(items) as AccountItem[]).filter(item => !(items[item] === credential[item]));
+    const data = JSON.stringify({
+      id: credential.id, 
+      name: name, 
+      email: email, 
+      password: credential.password, 
+      country: credential.country, 
+      is_signin: credential.is_signin
+    });
+    localStorage.setItem(`credential`, data);
+    toast(`Your new '${saved_items.join(` and `)}' has been saved!`);
   }
+
+  const save = () => {
+    const changes = {
+      name: name ? name : credential.name,
+      email: email && !(email === credential.email) ? email : credential.email
+    }
+    const message = `Both the name and email input are empty!`
+    changes.name && changes.email ? is_valid(changes.name, changes.email) : toast(message);
+  }
+
+  const clear = () => set_name(``);
 
   const delete_account = () => {
     localStorage.removeItem(`credential`);
@@ -60,13 +68,25 @@ export const Account: React.FC = () => {
       />
       <Header header="Account" />
       <Divider />
-      <input
-        className={input.bottom_border}
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={e => set_name(e.target.value)}
-      />
+      <div>
+        <div className={styles.name_container}>
+          <input
+            className={input.bottom_border}
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={e => set_name(e.target.value)}
+          />
+          {
+            name && (
+              <span 
+                className={[`material-icons`, styles.close].join(` `)}
+                onClick={clear}
+              >close</span>
+            )
+          }
+        </div>
+      </div>
       <input
         className={input.bottom_border}
         type="email" 

@@ -3,3 +3,12 @@
   border-radius: 5px;
   padding: 5px 15px;
 }
+
+.country_input_container{
+  position: relative;
+}
+
+.search_icon{
+  position: absolute;
+  top: 50%;
+}

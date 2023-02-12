@@ -1,7 +1,12 @@
+.header{
+  padding-bottom: 10px;
+}
+
 .container{
   border: 2px solid var(--pale-green);
   padding: 10px;
   display: flex;
+  gap: 15px;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
@@ -9,8 +14,11 @@
 
 .input{
   border: 2px solid var(--green);
+  color: var(--green);
   display: inline-block;
   min-width: auto;
   margin: 0;
   border-radius: 10px;
+  max-width: fit-content;
+  width: 100%;
 }

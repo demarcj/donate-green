@@ -1,8 +1,10 @@
+import { social } from "global-constants"
+
 export interface OptionModel{
   img: "account" | "heart" | "message" | "profile" | "wrench" | "facebook" | "instagram" | "email" | "link";
   nav?: string;
   text: string;
-  social?: `facebook` | `instagram`
+  social?: social;
 }
 
 export interface ProfileImg {

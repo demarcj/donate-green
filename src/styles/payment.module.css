@@ -13,8 +13,16 @@
   flex-direction: column;
 }
 
+.header{
+  text-transform: capitalize;
+}
+
 .header_container{
   text-align: center;
+}
+
+.payment_options{
+  color: black;
 }
 
 .total_container{

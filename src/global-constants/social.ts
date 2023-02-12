@@ -1,1 +1,1 @@
-export type social = `facebook` | `instagram`;
+export type social = `facebook` | `twitter` | `whatsapp` | `reddit` | `pinterest` | `telegram` | `email`; 
