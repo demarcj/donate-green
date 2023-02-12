@@ -10,28 +10,28 @@ export const Share: React.FC = () => {
       <Divider />
       <Option 
         img="facebook"
-        page="Facebook"
-        nav={`/profile/fundraiser`}
+        text="Facebook"
+        social="facebook"
       />
       <Option 
         img="instagram"
-        page="Instagram"
-        nav={`/profile/liked`}
+        text="Instagram"
+        social="instagram"
       />
       <Option 
         img="message"
-        page="Message"
-        nav={`/profile/messages`}
+        text="Message"
+        social="facebook"
       />
       <Option 
         img="email"
-        page="Email"
-        nav={`/profile/profile-image`}
+        text="Email"
+        social="facebook"
       />
       <Option 
         img="link"
-        page="Copy Link"
-        nav={`/profile/account`}
+        text="Copy Link"
+        social="facebook"
       />
       <NavBar />
     </>

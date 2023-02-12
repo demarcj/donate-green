@@ -5,6 +5,7 @@
 .option_container{
   display: flex;
   padding-bottom: 15px;
+  align-items: center;
 }
 
 .left_container{

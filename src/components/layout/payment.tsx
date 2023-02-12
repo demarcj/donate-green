@@ -12,6 +12,7 @@ import button from "styles/button.module.css";
 
 export const Payment: React.FC = () => {
   const [donate, set_donate] = useState(0);
+  const [disabled, set_disabled] = useState(true);
 
   const navigate = useNavigate();
   const search = useLocation().search;
@@ -21,6 +22,10 @@ export const Payment: React.FC = () => {
   const pathname = window.location.pathname.substring(0, (get_parameter_index - 1));
   const url = `${pathname}?id=${id}`
   const get_donate_amount = (num: number) => set_donate(num);
+  const handle_checkbox = () => {
+    const is_confirm = (document.querySelector(`#confirm`) as HTMLInputElement);
+    set_disabled(!is_confirm.checked);
+  }
   const handle_donate = () => {
     navigate(`home`);
   }
@@ -45,7 +50,6 @@ export const Payment: React.FC = () => {
           <div>Total</div>
           <div>${donate}</div>
         </div>
-        <div className="test"></div>
         <Divider />
         <FormControl>
           <FormLabel id="demo-radio-buttons-group-label">Payment Options</FormLabel>
@@ -90,21 +94,23 @@ export const Payment: React.FC = () => {
           </RadioGroup>
         </FormControl>
         <Divider />
-        <FormControlLabel 
-            label="Confirmation of payment" 
-            control={
-              <Checkbox 
-                sx={{
-                  mr: "auto"
-                }}
-              />
-            } 
+        <FormControlLabel
+          label="Confirmation of payment" 
+          control={
+            <Checkbox
+              id="confirm" 
+              onClick={handle_checkbox}
+              sx={{
+                mr: "auto"
+              }}
+            />
+          } 
         />
         <div className={styles.button}>
-          <button 
+          <button
             className={button.default} 
+            disabled={disabled}
             onClick={handle_donate}
-            disabled
           >
             Donate
           </button>

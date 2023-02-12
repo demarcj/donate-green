@@ -21,27 +21,27 @@ export const Profile: React.FC = () => {
       <Divider />
       <Option 
         img="account"
-        page="Create Fundraiser"
+        text="Create Fundraiser"
         nav={`/profile/fundraiser`}
       />
       <Option 
         img="heart"
-        page="Liked Organiztions"
+        text="Liked Organiztions"
         nav={`/profile/liked`}
       />
       <Option 
         img="message"
-        page="Messages"
+        text="Messages"
         nav={`/profile/messages`}
       />
       <Option 
         img="profile"
-        page="Profile Image"
+        text="Profile Image"
         nav={`/profile/profile-image`}
       />
       <Option 
         img="wrench"
-        page="Account"
+        text="Account"
         nav={`/profile/account`}
       />
       <div className={button.container}>

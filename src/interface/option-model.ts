@@ -1,7 +1,8 @@
 export interface OptionModel{
   img: "account" | "heart" | "message" | "profile" | "wrench" | "facebook" | "instagram" | "email" | "link";
-  nav: string;
-  page: string;
+  nav?: string;
+  text: string;
+  social?: `facebook` | `instagram`
 }
 
 export interface ProfileImg {
