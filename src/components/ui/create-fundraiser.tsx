@@ -25,7 +25,7 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
         <div
           className={styles.disclaimer} 
           style={display}
-        >Transaction fees may be deducted from each donation</div>
+        >Transaction fees may be deducted from each donation.</div>
         <button 
           className={button.outline}
           onClick={emit}

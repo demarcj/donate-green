@@ -1,0 +1,8 @@
+.container{
+  border: 2px solid var(--pale-green);
+  border-bottom: none;
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}

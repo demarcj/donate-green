@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { NavBar, Header, Divider, NavBack, DonateInput } from "components/ui";
-import { url_converter } from "functions"
+import { NavBar, Header, Divider, NavBack, DonateInput, GreenContainer } from "components/ui";
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -32,93 +31,95 @@ export const Payment: React.FC = () => {
 
   return (
     <div className={styles.main_container}>
-      <div>
+      <div className={styles.top_container}>
         <NavBack nav={url} />
         <Header header="Payment" />
       </div>
-      <div className={styles.container}>
-        <div className={styles.header_container}>
-          <div className={styles.thanks}>Thank you for donating to</div>
-          <h2 className={styles.header}>{title.replaceAll(`_`, ` `)}</h2>
-        </div>
-        <DonateInput 
-          text="Donation Amount"
-          get_donate_amount={get_donate_amount}
-        />
-        <Divider />
-        <div className={styles.total_container}>
-          <div>Total</div>
-          <div>{donate}</div>
-        </div>
-        <Divider />
-        <FormControl>
-          <FormLabel 
-            id="demo-radio-buttons-group-label"
-            className={styles.payment_options}
-          >Payment Options</FormLabel>
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="card"
-              name="radio-buttons-group"
+      <GreenContainer>
+        <>
+          <div className={styles.header_container}>
+            <div className={styles.thanks}>Thank you for donating to</div>
+            <h2 className={styles.header}>{title.replaceAll(`_`, ` `)}</h2>
+          </div>
+          <DonateInput 
+            text="Donation Amount"
+            get_donate_amount={get_donate_amount}
+          />
+          <Divider />
+          <div className={styles.total_container}>
+            <div>Total</div>
+            <div>{donate}</div>
+          </div>
+          <Divider />
+          <FormControl>
+            <FormLabel 
+              id="demo-radio-buttons-group-label"
+              className={styles.payment_options}
+            >Payment Options</FormLabel>
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                defaultValue="card"
+                name="radio-buttons-group"
+              >
+              <FormControlLabel 
+                value="card" 
+                label="Card" 
+                control={
+                  <Radio 
+                    sx={{
+                      mr: "auto"
+                    }}
+                  />
+                } 
+              />
+              <FormControlLabel 
+                value="paypal" 
+                label="PayPal" 
+                control={
+                  <Radio 
+                    sx={{
+                      mr: "auto"
+                    }}
+                  />
+                } 
+              />
+              <FormControlLabel 
+                value="other" 
+                label="Other" 
+                control={
+                  <Radio 
+                    sx={{
+                      mr: "auto"
+                    }}
+                  />
+                } 
+              />
+            </RadioGroup>
+          </FormControl>
+          <Divider />
+          <FormControlLabel
+            label="Confirmation of payment" 
+            control={
+              <Checkbox
+                id="confirm" 
+                onClick={handle_checkbox}
+                sx={{
+                  mr: "auto"
+                }}
+              />
+            } 
+          />
+          <div className={styles.button}>
+            <button
+              className={button.default} 
+              disabled={disabled}
+              onClick={handle_donate}
             >
-            <FormControlLabel 
-              value="card" 
-              label="Card" 
-              control={
-                <Radio 
-                  sx={{
-                    mr: "auto"
-                  }}
-                />
-              } 
-            />
-            <FormControlLabel 
-              value="paypal" 
-              label="PayPal" 
-              control={
-                <Radio 
-                  sx={{
-                    mr: "auto"
-                  }}
-                />
-              } 
-            />
-            <FormControlLabel 
-              value="other" 
-              label="Other" 
-              control={
-                <Radio 
-                  sx={{
-                    mr: "auto"
-                  }}
-                />
-              } 
-            />
-          </RadioGroup>
-        </FormControl>
-        <Divider />
-        <FormControlLabel
-          label="Confirmation of payment" 
-          control={
-            <Checkbox
-              id="confirm" 
-              onClick={handle_checkbox}
-              sx={{
-                mr: "auto"
-              }}
-            />
-          } 
-        />
-        <div className={styles.button}>
-          <button
-            className={button.default} 
-            disabled={disabled}
-            onClick={handle_donate}
-          >
-            Donate
-          </button>
-        </div>
-      </div>
+              Donate
+            </button>
+          </div>
+        </>
+      </GreenContainer>
       <NavBar />
     </div>
   )

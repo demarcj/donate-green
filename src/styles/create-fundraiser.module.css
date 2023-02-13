@@ -4,8 +4,22 @@
   padding: 5px 15px;
 }
 
+.country_input_text{
+  font-size: 18px;
+  position: relative;
+  top: 10px;
+}
+
 .country_input_container{
   position: relative;
+}
+
+.donate_input_wrapper{
+  padding-bottom: 15px;
+}
+
+.donate_info{
+  padding-bottom: 30px;
 }
 
 .search_icon{

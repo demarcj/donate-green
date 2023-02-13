@@ -30,12 +30,16 @@ export const CreateFundraiserOne: React.FC = () => {
       emit={emit}
     >
       <>
-        <DonateInput 
-          text="How much would you like to raise?"
-          get_donate_amount={get_donate_amount}
+        <div className={styles.donate_input_wrapper}>
+          <DonateInput 
+            text="How much would you like to raise?"
+            get_donate_amount={get_donate_amount}
           />
-        <div>The money will be sent directly to the organization of your choice.</div>
-        <div>Where are you fundraising?</div>
+        </div>
+        <div 
+          className={styles.donate_info}
+        >The money will be sent directly to the organization of your choice.</div>
+        <div className={styles.country_input_text}>Where are you fundraising?</div>
         <div className={styles.country_input_container}>
           <Autocomplete 
             options={countries} 

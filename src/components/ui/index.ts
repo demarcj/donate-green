@@ -2,6 +2,7 @@ export * from "./activities-ui";
 export * from "./create-fundraiser";
 export * from "./divider";
 export * from "./donate-input";
+export * from "./green-container";
 export * from "./icon-title";
 export * from "./header";
 export * from "./home-ui";

@@ -42,3 +42,7 @@ main{
   position: relative;
   overflow: hidden;
 }
+
+main > *:first-child{
+  padding-top: 15px;
+}
