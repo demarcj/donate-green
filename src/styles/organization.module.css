@@ -12,3 +12,12 @@
   margin-left: 45px;
   margin-bottom: 30px;
 }
+
+.info_container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_wrapper{
+  margin: 15px 0;
+}

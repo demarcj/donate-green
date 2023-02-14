@@ -3,7 +3,9 @@ import { ImgLiked, ProgressBar } from "./";
 import { HomeModel } from "interface";
 import styles from "styles/home.module.css";
 
-export const HomeUI: React.FC<HomeModel> = ({id, title, location, donation_goal, donation_amount, liked_organization}) => {
+export const HomeUI: React.FC<{org: HomeModel}> = ({ org }) => {
+  const {id, title, liked_organization, donation_amount, donation_goal, location} = org;
+  
   return (
     <div className={styles.container}>
       <div className={styles.img_container}>

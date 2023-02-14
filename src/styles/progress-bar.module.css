@@ -3,6 +3,8 @@
   overflow: hidden;
   height: 5px;
   position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .progress_max{

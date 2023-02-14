@@ -1,32 +1,36 @@
 import React, { useState } from "react";
-import { Search, HomeUI, NavBar } from "components/ui";
-import { OrganizationData } from "temp"
-import styles from 'styles/home.module.css'
+import { SearchInput, HomeUI, NavBar } from "components/ui";
+import { HomeModel } from "interface";
+import { OrganizationData } from "temp";
+import styles from 'styles/home.module.css';
 
 export const Home: React.FC = () => {
   const [search, set_search] = useState(``);
+  const [organiztion, set_organiztion] = useState(OrganizationData)
 
-  const filter_organiztion = OrganizationData.filter(org => {
-    const tidy = search.toLocaleLowerCase().trim();
-    const is_title = org.title.toLocaleLowerCase().includes(tidy);
-    const is_location = org.location.toLocaleLowerCase().includes(tidy);
-    return !search || is_title || is_location;
-  })
+  const filter_organiztion = (search_word: string) => {
+    const filter_org = OrganizationData.filter(org => {
+      set_search(search_word);
+      const tidy = search_word.toLocaleLowerCase().trim();
+      const is_title = org.title.toLocaleLowerCase().includes(tidy);
+      const is_location = org.location.toLocaleLowerCase().includes(tidy);
+      return !tidy || is_title || is_location;
+    });
+    set_organiztion(filter_org);
+  }
 
   return (
     <div className={styles.home_container}>
-      <Search />
+      <SearchInput
+        search={search}
+        emit={filter_organiztion}
+      />
       <h1 className={styles.header}>Help heal the world one community at a time</h1>
       {
-        filter_organiztion.map(org => (
+        organiztion.map((org: HomeModel) => (
           <HomeUI
             key={org.id}
-            id={org.id}
-            title={org.title}
-            location={org.location}
-            donation_goal={org.donation_goal}
-            donation_amount={org.donation_amount}
-            liked_organization={org.liked_organization}
+            org={org}
           />
         ))
       }

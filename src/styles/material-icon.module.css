@@ -2,9 +2,6 @@
   font-size: 48px;
   color: #183636;
   cursor: pointer;
-  display: inline-block;
-  position: absolute;
-  top: 0;
 }
 
 .favorite_container{

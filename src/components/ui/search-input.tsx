@@ -1,8 +1,9 @@
 import React from "react";
-import search from "images/search.png";
+import { SearchModel } from "interface"
+import search_icon from "images/search.png";
 import styles from "styles/search.module.css";
 
-export const Search: React.FC = () => {
+export const SearchInput: React.FC<SearchModel> = ({search, emit}) => {
   return (
     <div className={styles.search_container}>
       <input
@@ -11,8 +12,10 @@ export const Search: React.FC = () => {
         name="search" 
         id="search" 
         placeholder="Search Organizations"
+        value={search}
+        onChange={e => emit(e.target.value)}
       />
-      <img className={styles.search_icon} src={search} alt="" />
+      <img className={styles.search_icon} src={search_icon} alt="" />
     </div>
   )
 }

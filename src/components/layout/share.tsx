@@ -1,12 +1,15 @@
 import React from "react";
 import { NavBar, Option, Divider, Header, NavBack } from "components/ui";
+import styles from "styles/share.module.css";
 
 export const Share: React.FC = () => {
 
   return (
     <>
-      <Header header="Share" />
-      <NavBack nav="activities" />
+      <div className={styles.header_container}>
+        <NavBack nav="activities" />
+        <Header header="Share" />
+      </div>
       <Divider />
       <Option 
         img="facebook"

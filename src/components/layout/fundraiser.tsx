@@ -1,5 +1,5 @@
 import React from "react";
-import { NavBar, NavBack, Header, Divider, Search } from "components/ui";
+import { NavBar, NavBack, Header, Divider, SearchInput } from "components/ui";
 import { OrganizationData } from "temp";
 import { HomeModel } from "interface";
 import { url_converter } from "functions"
@@ -19,7 +19,7 @@ export const Fundraiser: React.FC = () => {
     <>
       <NavBack nav="/profile" />
       <Header header="Create Fundraiser" />
-      <Search />
+      {/* <SearchInput /> */}
       <Divider />
       <h2 className={styles.header}>Select a nonprofit organiztion</h2>
       {
