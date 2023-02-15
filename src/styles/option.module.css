@@ -22,3 +22,7 @@
   margin-right: 15px;
   width: 24px;
 }
+
+.text{
+  text-transform: capitalize;
+}

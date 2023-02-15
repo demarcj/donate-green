@@ -6,8 +6,10 @@ import { OrganizationData } from "temp";
 export const Liked: React.FC = () => {
   return (
     <>
-      <NavBack nav="/profile" />
-      <Header header="Liked Organization" />
+      <div className={styles.header_container}>
+        <NavBack nav="/profile" />
+        <Header header="Liked Organization" />
+      </div>
       <Divider />
       {
         OrganizationData.map(org => (

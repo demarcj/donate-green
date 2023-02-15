@@ -1,7 +1,6 @@
 .save{
-  position: absolute;
-  inset: 15px 15px auto auto;
   color: var(--gray);
   cursor: pointer;
   font-size: 18px;
+  justify-self: end;
 }

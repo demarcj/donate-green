@@ -1,16 +1,18 @@
-import { social } from "global-constants"
+import { social, share_img } from "global-constants";
+import { HomeModel } from "."
 
 export interface OptionModel{
-  img: "account" | "heart" | "message" | "profile" | "wrench" | "facebook" | "instagram" | "email" | "link";
+  img: share_img;
   nav?: string;
   text: string;
   social?: social;
+  org?: HomeModel;
 }
 
 export interface ProfileImg {
   account: string;
   heart: string;
-  message: string;
+  whatsapp: string;
   profile: string;
   wrench: string;
   facebook: string;

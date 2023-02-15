@@ -62,11 +62,11 @@ export const Account: React.FC = () => {
 
   return (
     <>
-      <NavBack nav="/profile" />
-      <Save 
-        save={save}
-      />
-      <Header header="Account" />
+      <div className={styles.header_container}>
+        <NavBack nav="/profile" />
+        <Header header="Account" />
+        <Save save={save} />
+      </div>
       <Divider />
       <div>
         <div className={styles.name_container}>

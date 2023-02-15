@@ -17,8 +17,10 @@ export const Fundraiser: React.FC = () => {
 
   return (
     <>
-      <NavBack nav="/profile" />
-      <Header header="Create Fundraiser" />
+      <div className={styles.header_container}>
+        <NavBack nav="/profile" />
+        <Header header="Create Fundraiser" />
+      </div>
       {/* <SearchInput /> */}
       <Divider />
       <h2 className={styles.header}>Select a nonprofit organiztion</h2>

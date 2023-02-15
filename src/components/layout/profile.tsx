@@ -30,7 +30,7 @@ export const Profile: React.FC = () => {
         nav={`/profile/liked`}
       />
       <Option 
-        img="message"
+        img="whatsapp"
         text="Messages"
         nav={`/profile/messages`}
       />

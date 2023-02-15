@@ -5,10 +5,12 @@ import styles from "styles/profile-image.module.css";
 export const ProfileImage: React.FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <NavBack nav="/profile" />
-        <Save />
-        <Header header="Profile Image" />
+      <div>
+        <div className={styles.header_container}>
+          <NavBack nav="/profile" />
+          <Header header="Profile Image" />
+          <Save />
+        </div>
         <ProfileImgUI />
         <Divider />
       </div>

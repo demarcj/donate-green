@@ -31,13 +31,13 @@ export const Payment: React.FC = () => {
 
   return (
     <div className={styles.main_container}>
-      <div className={styles.top_container}>
+      <div className={styles.header_container}>
         <NavBack nav={url} />
         <Header header="Payment" />
       </div>
       <GreenContainer>
         <>
-          <div className={styles.header_container}>
+          <div className={styles.title_container}>
             <div className={styles.thanks}>Thank you for donating to</div>
             <h2 className={styles.header}>{title.replaceAll(`_`, ` `)}</h2>
           </div>

@@ -8,9 +8,7 @@ export const CreateFundraiserFour: React.FC = () => {
   const path = pathname.substring(0, (pathname.length - 4));
   const search = useLocation().search;
   const id = new URLSearchParams(search).get(`id`);
-  const emit = () => {
-    navigate(`/home`);
-  }
+  const emit = () => navigate(`/home`);
 
   return (
     <CreateFundraiser 

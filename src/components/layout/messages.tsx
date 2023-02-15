@@ -1,5 +1,6 @@
 import React from "react";
 import { NavBar, NavBack, Header, Divider, MessageArea } from "components/ui";
+import styles from "styles/message.module.css";
 
 export const Messages: React.FC = () => {
   const messages = [
@@ -12,8 +13,10 @@ export const Messages: React.FC = () => {
   ];
   return (
     <>
-      <NavBack nav="/profile" />
-      <Header header="Messages" />
+      <div className={styles.header_container}>
+        <NavBack nav="/profile" />
+        <Header header="Messages" />
+      </div>
       <Divider />
       {messages.map(message => (
           <MessageArea

@@ -1,0 +1,1 @@
+export type share_img = "account" | "heart" | "whatsapp" | "profile" | "wrench" | "facebook" | "instagram" | "email" | "link";

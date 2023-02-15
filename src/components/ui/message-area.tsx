@@ -1,7 +1,7 @@
 import React from 'react';
 import { More, UserImage } from "components/ui"
 import { MessageModel } from "interface";
-import styles from "styles/message.module.css";
+import styles from "styles/message-area.module.css";
 
 export const MessageArea: React.FC<MessageModel> = ({ img, message, name }) => {
 

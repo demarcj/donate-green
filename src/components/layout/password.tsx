@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import { NavBar, Header, Divider, NavBack, Save } from "components/ui";
 import { CredentialModel } from "interface";
+import styles from "styles/password.module.css";
 import input from "styles/input.module.css";
 
 type SaveConst = `not_old_password` | `no_match` | `is_empty` | `success`;
@@ -46,11 +47,11 @@ export const Password: React.FC = () => {
 
   return (
     <>
-      <NavBack nav="/profile/account" />
-      <Header header="Password" />
-      <Save 
-        save={save}
-      />
+      <div className={styles.header_container}>
+        <NavBack nav="/profile/account" />
+        <Header header="Password" />
+        <Save save={save} />
+      </div>
       <Divider />
       <input
         className={input.bottom_border}

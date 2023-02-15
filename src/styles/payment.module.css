@@ -4,15 +4,17 @@
   height: 100vh;
 }
 
-.top_container{
-  position: relative;
+.header_container{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
 }
 
 .header{
   text-transform: capitalize;
 }
 
-.header_container{
+.title_container{
   text-align: center;
 }
 

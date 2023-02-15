@@ -1,3 +1,15 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header_container{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
 .textarea{
   border: 2px solid var(--pale-green);
   border-radius: 5px;
@@ -25,4 +37,16 @@
 .search_icon{
   position: absolute;
   top: 50%;
+}
+
+.title{
+  text-align: center;
+  text-transform: capitalize;
+  padding-bottom: 45px;
+}
+
+.bottom_container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
