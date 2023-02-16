@@ -3,7 +3,7 @@ export * from "./credential-model";
 export * from "./donate-input-model";
 export * from "./green-container-model";
 export * from "./header-model";
-export * from "./home-model";
+export * from "./organization-model";
 export * from "./img-liked-model";
 export * from "./message-model";
 export * from "./nav-back-model";

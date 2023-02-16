@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { SearchInput, HomeUI, NavBar } from "components/ui";
-import { HomeModel } from "interface";
+import { OrganizationModel } from "interface";
 import { OrganizationData } from "temp";
 import styles from 'styles/home.module.css';
 
 export const Home: React.FC = () => {
   const [search, set_search] = useState(``);
-  const [organiztion, set_organiztion] = useState(OrganizationData)
+  const [organiztion, set_organiztion] = useState(OrganizationData);
 
   const filter_organiztion = (search_word: string) => {
     const filter_org = OrganizationData.filter(org => {
@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
       />
       <h1 className={styles.header}>Help heal the world one community at a time</h1>
       {
-        organiztion.map((org: HomeModel) => (
+        organiztion.map((org: OrganizationModel) => (
           <HomeUI
             key={org.id}
             org={org}

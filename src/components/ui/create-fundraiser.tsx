@@ -11,7 +11,7 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
   const pathname = window.location.pathname;
   const start_title = pathname.replace(`/profile/fundraiser/create/`, ``);
   const end_title_index = start_title.lastIndexOf(`/`);
-  const title = start_title.substring(0, end_title_index)
+  const title = start_title.substring(0, end_title_index);
   
   return (
     <div className={styles.container}>
@@ -21,6 +21,13 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
       </div>
       <Divider />
       <div className={styles.bottom_container}>
+        <div className={styles.circles}>
+          {
+            Array.from({length: 4}, (element, i) => (
+              <div className={styles.circle}></div>
+            ))
+          }
+        </div>
         {
           page_number < 4 ? (
             <>
@@ -41,12 +48,10 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
             <GreenContainer>
               <>
                 {children}
-                <div className={button.container}>
-                  <button 
-                    className={button.outline}
-                    onClick={emit}
-                  >Create</button>
-                </div>
+                <button 
+                  className={[button.outline, button.bottom].join(" ")}
+                  onClick={emit}
+                >Create</button>
               </>
             </GreenContainer>
           )

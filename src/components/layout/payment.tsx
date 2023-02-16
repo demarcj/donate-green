@@ -109,15 +109,13 @@ export const Payment: React.FC = () => {
               />
             } 
           />
-          <div className={styles.button}>
-            <button
-              className={button.default} 
-              disabled={disabled}
-              onClick={handle_donate}
-            >
-              Donate
-            </button>
-          </div>
+          <button
+            className={[button.default, button.bottom].join(" ")} 
+            disabled={disabled}
+            onClick={handle_donate}
+          >
+            Donate
+          </button>
         </>
       </GreenContainer>
       <NavBar />

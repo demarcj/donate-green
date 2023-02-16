@@ -1,9 +1,9 @@
 import React from "react";
 import { ImgLiked, ProgressBar } from "./";
-import { HomeModel } from "interface";
+import { OrganizationModel } from "interface";
 import styles from "styles/home.module.css";
 
-export const HomeUI: React.FC<{org: HomeModel}> = ({ org }) => {
+export const HomeUI: React.FC<{org: OrganizationModel}> = ({ org }) => {
   const {id, title, liked_organization, donation_amount, donation_goal, location} = org;
   
   return (

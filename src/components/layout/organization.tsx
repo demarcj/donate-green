@@ -36,12 +36,10 @@ export const Organization: React.FC = () => {
                   donation_goal={org.donation_goal}
                   location={org.location}
                 />
-                <div className={styles.button_wrapper}>
-                  <button 
-                    className={button.default}
-                    onClick={go_to}
-                  >Donate</button>
-                </div>
+                <button 
+                  className={button.default}
+                  onClick={go_to}
+                >Donate</button>
                 <div>{org.description}</div>
                 <More></More>
                 <Divider></Divider>

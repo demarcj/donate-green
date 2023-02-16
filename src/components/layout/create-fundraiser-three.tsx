@@ -1,6 +1,8 @@
 import React from "react";
-import { CreateFundraiser, UploadButton } from "components/ui";
+import { CreateFundraiser } from "components/ui";
 import { useLocation, useNavigate } from "react-router-dom";
+import button from "styles/button.module.css";
+import styles from "styles/create-fundraiser.module.css";
 
 export const CreateFundraiserThree: React.FC = () => {
   const navigate = useNavigate();
@@ -18,7 +20,9 @@ export const CreateFundraiserThree: React.FC = () => {
     >
       <>
         <div>Select an image to represent your fundraiser.</div>
-        <UploadButton />
+        <div className={styles.upload_container}>
+          <button className={button.upload}>Upload image</button>
+        </div>
       </>
     </CreateFundraiser>
   )

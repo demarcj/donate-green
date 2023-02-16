@@ -1,12 +1,12 @@
 import { social, share_img } from "global-constants";
-import { HomeModel } from "."
+import { OrganizationModel } from "."
 
 export interface OptionModel{
   img: share_img;
   nav?: string;
   text: string;
   social?: social;
-  org?: HomeModel;
+  org?: OrganizationModel;
 }
 
 export interface ProfileImg {

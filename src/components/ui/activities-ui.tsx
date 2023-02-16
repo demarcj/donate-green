@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Divider, More } from "components/ui";
-import { HomeModel } from "interface";
+import { OrganizationModel } from "interface";
 import styles from "styles/activities.module.css";
 import wood from "images/wood.jpg";
 
-export const ActivitiesUI: React.FC<{org: HomeModel}> = ({ org }) => {
+export const ActivitiesUI: React.FC<{org: OrganizationModel}> = ({ org }) => {
   const navigate = useNavigate();
   const {id, title, location, donation_amount, donation_goal} = org;
   return (

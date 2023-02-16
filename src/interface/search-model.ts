@@ -1,4 +1,4 @@
-import { HomeModel } from "interface";
+import { OrganizationModel } from "interface";
 
 export interface SearchModel {
   search: string;

@@ -44,12 +44,10 @@ export const Profile: React.FC = () => {
         text="Account"
         nav={`/profile/account`}
       />
-      <div className={button.container}>
         <button 
-          className={button.signout}
+          className={[button.signout, button.bottom].join(" ")}
           onClick={signout}
         >Sign out</button>
-      </div>
       <NavBar />
     </>
   )

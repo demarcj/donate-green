@@ -1,4 +1,4 @@
-export interface HomeModel {
+export interface OrganizationModel {
   id: string;
   title: string;
   location: string;

@@ -104,12 +104,10 @@ export const Account: React.FC = () => {
         />
         <Link to="/profile/account/password" className={styles.change}>Change Password</Link>
       </div>
-      <div className={button.container}>
-        <button 
-          className={button.signout}
-          onClick={delete_account}
-        >Delete Account</button>
-      </div>
+      <button 
+        className={[button.signout, button.bottom].join(" ")}
+        onClick={delete_account}
+      >Delete Account</button>
       <ToastContainer />
       <NavBar />
     </>

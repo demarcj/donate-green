@@ -17,5 +17,25 @@
 }
 
 .container{
+  display: flex;
+  flex-direction: column;
   margin: auto 0 80px;
+}
+
+.bottom{
+  margin: auto 0 45px;
+}
+
+.wrapper{
+  margin: auto 0 80px;
+  display: grid;
+}
+
+.upload{
+  border: 1px solid var(--pale-green);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white;
+  display: inline-block;
 }

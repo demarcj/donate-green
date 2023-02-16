@@ -9,13 +9,6 @@
   position: relative;
 }
 
-.label{
-  border: 1px solid var(--pale-green);
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
 .input{
   opacity: 0;
   margin: auto;

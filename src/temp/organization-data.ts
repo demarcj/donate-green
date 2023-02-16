@@ -1,6 +1,6 @@
-import { HomeModel } from "interface";
+import { OrganizationModel } from "interface";
 
-export const OrganizationData: HomeModel[] = [
+export const OrganizationData: OrganizationModel[] = [
   {
     id: `ef2efd70-e865-498d-bc0f-2138377544c4`,
     title: `Save the Trees`,
