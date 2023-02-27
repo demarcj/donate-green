@@ -9,3 +9,16 @@
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
 }
+
+.dialog{
+  margin: auto;
+}
+
+.dialog::backdrop{
+  background: linear-gradient(45deg, #50AE86, #FF8540);
+  opacity: 0.4;
+}
+
+.upload_container{
+  margin: auto;
+}

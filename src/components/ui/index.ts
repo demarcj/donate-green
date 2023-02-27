@@ -16,5 +16,4 @@ export * from "./progress-bar";
 export * from "./option";
 export * from "./save";
 export * from "./search-input"; 
-export * from "./upload-button";
 export * from "./user-image";

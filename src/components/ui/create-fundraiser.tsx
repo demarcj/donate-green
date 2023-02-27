@@ -29,10 +29,12 @@ export const CreateFundraiser: React.FC<CreateFundraiserModel> = ({children, pre
       <div className={styles.bottom_container}>
         <div className={styles.circles}>
           { Array.from({length: 4}, (el, i) => (
-            <div 
-              className={styles.circle}
-              style={active_page(i)}
-            ></div>)
+              <div
+                key={i} 
+                className={styles.circle}
+                style={active_page(i)}
+              ></div>
+            )
           )}
         </div>
         {
