@@ -31,6 +31,10 @@ input{
   min-width: 100%;
 }
 
+form{
+  display: grid;
+}
+
 main{
   height: 100vh;
   display: flex;
