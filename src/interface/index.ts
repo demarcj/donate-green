@@ -6,6 +6,7 @@ export * from "./header-model";
 export * from "./organization-model";
 export * from "./img-liked-model";
 export * from "./message-model";
+export * from "./new-fundraiser-data-model";
 export * from "./nav-back-model";
 export * from "./option-model";
 export * from "./profile-img-model";

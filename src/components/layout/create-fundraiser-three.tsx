@@ -10,7 +10,9 @@ export const CreateFundraiserThree: React.FC = () => {
   const path = pathname.substring(0, (pathname.length -5));
   const search = useLocation().search;
   const id = new URLSearchParams(search).get(`id`);
-  const emit = () => navigate(`${path}four?id=${id}`);
+  const emit = () => {
+    navigate(`${path}four?id=${id}`)
+  };
   const save = () => {
     console.log(`saved`)
   }

@@ -1,3 +1,7 @@
+.activities_main_container{
+  overflow: scroll;
+}
+
 .activities_container{
   border-radius: 15px;
   border: 2px solid var(--green);
